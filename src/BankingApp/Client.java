@@ -74,7 +74,7 @@ public class Client extends User{
 					System.out.println("Add initial found:");
 					this.balance = scan.nextLong();
 					
-					System.out.print("Is this a Joint Account?  \nType 'Y' for yes or 'N' for No");  
+					System.out.println("Is this a Joint Account?  \nType 'Y' for yes or 'N' for No");  
 				       String select = scan.next().toUpperCase(); 
 				       if (select.equals("Y")) {  
 				           this.accountType = true;
@@ -157,15 +157,15 @@ public class Client extends User{
 			}
 		}
 		public void withdraw() {
-			System.out.println("===============================*****===============================");
 			System.out.println("withdraw Money Page ");
+			System.out.println("===============================*****===============================");
 			System.out.println("Enter the amount: ");
 			double newAmount = scan.nextDouble();
 			if(newAmount < balance) {
 				balance -= newAmount;
 				System.out.println(fName + "  " + lastName + " has $ " + balance);
 			}else {
-				System.out.println("Withdrawal by " + fName + " " + lastName + "fails");
+				System.out.println("The Withdrawal by " + this.firstname  + " fails");
 			}
 		}
 	//Deposit Fund
@@ -185,18 +185,23 @@ public class Client extends User{
 			double newAmount = scan.nextDouble();
 			balance +=newAmount;
 			System.out.println(this.fName + " " + this.lastName + "'s Current Balance is: $ " + balance);
+			System.out.println("===============================*****===============================");
+			System.out.println("");
+			
 		}
 	//Show my account informations  
     public void showAccount() {    
+    	System.out.println("Show Current Balance Page ");
     	System.out.println("===============================*****===============================");
-		System.out.println("Show Current Balance Page ");
 		System.out.println("Enter the amount: ");
         System.out.println("Your Current Balance is : " + balance);  
+        System.out.println("===============================*****===============================");
+		System.out.println("");
     }
 	//Transfer fund
 	public void transfer() {
-		System.out.println("===============================*****===============================");
 		System.out.println("Tansfer Money Page ");
+		System.out.println("===============================*****===============================");
 		System.out.println("Enter the amount: ");
 		System.out.println("Enter an amount to be tranfered: ");
 		int amount = scan.nextInt();
@@ -215,7 +220,9 @@ public class Client extends User{
 			this.balance -=amount;
 			client.balance += amount;
 			System.out.println("Amount of " + this.fName + " " + super.lastName + " current balance is: $" + this.balance );
-			System.out.println("Amount of " + fName + " " + lName + " current balance is: $" + client.balance );		
+			System.out.println("Amount of " + fName + " " + lName + " current balance is: $" + client.balance );	
+			System.out.println("===============================*****===============================");
+			System.out.println("");
 		}
 	}
 	

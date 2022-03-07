@@ -111,14 +111,14 @@ public class Register extends Client {
 				case 1: 
 							userRole = "Admin";
 							System.out.println(" ");
-							System.out.println("Admin Login Page");
+							//System.out.println("Admin Login Page");
 							adminLogin();
 							System.out.println(" ");
 						break;
 				case 2: 
 							userRole = "Manager";
 							System.out.println(" ");
-							System.out.println("Manager Login Page");
+							//System.out.println("Manager Login Page");
 							managerLogin();							
 							System.out.println(" ");
 						break;
@@ -285,14 +285,14 @@ public class Register extends Client {
 		System.out.println("-Password : "+ userPassword);
 		System.out.println("-Your role is: " + userRole);
 		System.out.println(" ");
-		System.out.println("Client Sigin Page: Signin Please:");
+		System.out.println("Client Sigin Page:");
 		clientLogin();	
 	}
 			
 	//Customer Login
 	public void clientLogin() {
+		//System.out.println("Client Login Page ");
 		System.out.println("===============================*****===============================");
-		System.out.println("Client Login Page ");
 		scan = new Scanner(System.in);
 		System.out.println("Enter your UserName:");
 		String newUserName = scan.nextLine();
@@ -308,6 +308,8 @@ public class Register extends Client {
 				clientActivities();	
 			}else {
 				System.out.println("Invalid User Name or Password!");
+				System.out.println("===============================*****===============================");
+				//System.out.println("");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -353,6 +355,8 @@ public class Register extends Client {
 				
 			}else {
 				System.out.println("Invalid User Name or Password!");
+				System.out.println("===============================*****===============================");
+				//System.out.println("");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -381,6 +385,8 @@ public class Register extends Client {
 					accountAprovedOrDenyPage();
 				}else {
 					System.out.println("Invalid User Name or Password!");
+					System.out.println("===============================*****===============================");
+					//System.out.println("");
 				}
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -538,7 +544,7 @@ public class Register extends Client {
 				case 3:
 							userRole = "Client";
 							System.out.println(" ");
-							System.out.println("Client Login Page");
+							//System.out.println("Client Login Page");
 							clientLogin();
 							System.out.println(" ");
 						break;
